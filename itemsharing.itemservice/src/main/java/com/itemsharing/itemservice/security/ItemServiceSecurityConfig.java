@@ -14,7 +14,7 @@ public class ItemServiceSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .httpBasic().and()
                 .authorizeRequests()
-                .antMatchers("/v1/*")
+                .antMatchers("/v1/item/**")
                 .permitAll().anyRequest().authenticated()
                 .and().csrf().disable().httpBasic();
     }

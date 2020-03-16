@@ -11,7 +11,7 @@ spring:
   datasource:
     url: "jdbc:mysql://localhost:3306/itemsharingapp?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
     username: "root"
-    password: "XXXXXXXX"
+    password: "bbaral1015"
     testWhileIdle: "true"
     validationQuery: "SELECT 1"
 

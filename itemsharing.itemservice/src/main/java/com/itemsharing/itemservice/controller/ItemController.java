@@ -34,7 +34,7 @@ public class ItemController {
         }
     }
 
-    @RequestMapping(value="/itemsByUser", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value="/itemsByUser", method = RequestMethod.GET, consumes = "application/json", produces = "application/json")
     public ResponseEntity<List<Item>> getAllItemsByUser() throws Exception {
         String username = "jadams";
         List<Item> items = itemService.getItemsByUsername(username);
@@ -46,12 +46,12 @@ public class ItemController {
 
     }
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = "application/json", produces = "application/json")
     public List<Item> getAllItems() {
         return itemService.getAllItems();
     }
 
-    @RequestMapping(value ="/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value ="/{id}", method = RequestMethod.GET, consumes = "application/json", produces = "application/json")
     public Item getItemById(@PathVariable(value = "id") Long id) {
         return itemService.getItemById(id);
     }
